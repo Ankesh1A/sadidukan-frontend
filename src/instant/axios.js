@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://sadidukan-back.onrender.com', // Backend URL
+  baseURL: 'https://sadidukan-back.onrender.com', // ✅ Correct backend URL
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json',            // ✅ Required for JSON payloads
   },
-  withCredentials: true, // Cookies ko bhejne ke liye
+  withCredentials: true,                           // ✅ Required for sending cookies (important!)
 });
 
 export default axiosInstance;
